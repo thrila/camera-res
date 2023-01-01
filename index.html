@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive website</title>
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <section>
+      <!-- <div class="circle"></div> -->
+      <header>
+        <a class="logo" href="#">
+           Camera
+          
+        </a>
+        <div class="toggle" onclick="toggleMenu()"></div>
+        <ul class="navigation">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">What's New</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </header>
+      <div class="content">
+        <div class="textBox">
+          <h2> Capturing moments,</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+            gravida facilisis orci, sed egestas nibh scelerisque non. Nunc
+            pharetra eget dolor ut gravida. Mauris dictum velit eu consectetur
+            dignissim. Duis eget tempus justo. Fusce a justo blandit, imperdiet
+            orci at, rutrum velit. Quisque cursus semper sodales. Aliquam erat
+            volutpat. Fusce ac eleifend erat. Nunc gravida ullamcorper mi, vitae
+            dapibus justo consectetur et. Aenean eget lectus eget velit semper
+            ullamcorper sit amet quis est. Aenean ac condimentum magna.
+            Pellentesque pharetra ipsum quis pharetra sempe
+          </p>
+          <a href="#">Buy now!</a>
+        </div>
+
+        <!-- Slider main container -->
+       
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="camera1.png" alt=""></div>
+                  <div class="swiper-slide"><img src="camera2.png" alt=""></div>
+                  <div class="swiper-slide"><img src="camera3.png" alt=""></div>
+                  <div class="swiper-slide"><img src="camera4.png" alt=""></div>
+                  <div class="swiper-slide"><img src="camera5.png" alt=""></div>
+                  <div class="swiper-slide"><img src="camera6.png" alt=""></div>
+                </div>
+                <!-- <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div> -->
+                <!-- <div class="swiper-pagination"></div> -->
+              </div>
+        
+
+      </div>
+      <ul class="sci">
+        <li>
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </li>
+      </ul>
+    </section>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          spaceBetween: 30,
+          centeredSlides: true,
+          autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+          },
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        });
+        function toggleMenu(){
+            const menuToggle = document.querySelector('.toggle');
+            menuToggle.classList.toggle('active')
+            const navigation = document.querySelector('.navigation');
+            navigation.classList.toggle('active')
+        }
+      </script>
+  </body>
+</html>
